@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/action_recycler_items">
+
+    <fragment
+        android:id="@+id/action_recycler_items"
+        android:name="com.icg.training.FirstFragment"
+        android:label="RecyclerView"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.icg.training.SecondFragment"
+        android:label="List Items"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/action_recycler_items" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/ThirdFragment"
+        android:name="com.icg.training.Widgets"
+        android:label="Widgets"
+        tools:layout="@layout/fragment_widgets">
+
+
+    </fragment>
+</navigation>
